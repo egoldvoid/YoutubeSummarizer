@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Summarizer",
+    "version": "1.0",
+    "description": "Summarizes YouTube videos so you can absorb knowledge quickly.",
+    "permissions": [
+      "activeTab", 
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    }
+  }
+  
