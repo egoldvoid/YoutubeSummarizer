@@ -10,8 +10,7 @@ document.getElementById('summarizeBtn').addEventListener('click', async () => {
   }
   
   async function getSummary(videoUrl) {
-    const apiUrl = 'https://your-summary-api-endpoint.com';  // Replace with your actual API
-    const response = await fetch(apiUrl, {
+    const response = await fetch('http://127.0.0.1:5000/summarize', {  // Flask is running locally
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -20,6 +19,6 @@ document.getElementById('summarizeBtn').addEventListener('click', async () => {
     });
   
     const data = await response.json();
-    return data.summary;
+    return data.summary || 'Error fetching summary';
   }
   
